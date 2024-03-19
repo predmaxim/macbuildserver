@@ -1,106 +1,111 @@
 @use "@/app/(styles)/vars" as *;
 
-.HomePage {
+//.HomePage {
 
-  .heroSection {
-    padding: 7.6rem 0 5.5rem;
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap-reverse;
+.heroSection {
+  padding: 7.6rem 0 5.5rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap-reverse;
+
+  @media screen and (width <= $tablet) {
+    padding: 2rem 0 3.5rem;
+  }
+
+  .leftSide {
+    flex: 1 1 55%;
+
+    .h1 {
+      margin-bottom: 2.5rem;
+      max-width: 88%;
+    }
+
+    .description {
+      margin-bottom: 2.5rem;
+    }
 
     @media screen and (width <= $tablet) {
-      padding: 2rem 0 3.5rem;
-    }
-
-    .leftSide {
-      flex: 1 1 55%;
-
       .h1 {
-        margin-bottom: 2.5rem;
-        max-width: 88%;
-      }
-
-      .description {
-        margin-bottom: 2.5rem;
-      }
-
-      @media screen and (width <= $tablet) {
-        .h1 {
-          max-width: initial;
-        }
-      }
-      @media screen and (width <= $mobile) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-    }
-
-    .rightSide {
-      display: flex;
-      justify-content: center;
-      flex: 1 1 35%;
-
-      .circle {
-        position: relative;
-        width: fit-content;
-        height: fit-content;
-        margin-top: -1.1rem;
-
-        &::before {
-          content: "";
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 10px;
-          left: -5px;
-          z-index: -1;
-          background-color: #edf7fa;
-          border-radius: 50%;
-        }
-
-        .heroImg {
-          width: 243px;
-          height: auto;
-
-          @media screen and (width <= $mobile) {
-            width: 170px;
-          }
-        }
+        max-width: initial;
       }
     }
-  }
-
-  .recentPostsSection {
-    background-color: #edf7fa;
-    padding: 1.5rem 0 2rem;
-
-    &__header {
+    @media screen and (width <= $mobile) {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      padding-bottom: 1.5rem;
-
-
-      @media screen and (width <= $mobile) {
-        text-align: center;
-        justify-content: center;
-        
-        .view-all-link {
-          display: none;
-        }
-      }
-
+      text-align: center;
     }
+
   }
 
-  .featuredWorksSection {
-    padding: 1.5rem 0 2rem;
+  .rightSide {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 35%;
 
-    &__header {
-      padding-bottom: 1.5rem;
+    .circle {
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      margin-top: -1.1rem;
+
+      @media screen and (width <= $mobile) {
+        margin-top: initial;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 10px;
+        left: -5px;
+        z-index: -1;
+        background-color: #edf7fa;
+        border-radius: 50%;
+      }
+
+      .heroImg {
+        width: 243px;
+        height: auto;
+
+        @media screen and (width <= $mobile) {
+          width: 170px;
+        }
+      }
     }
   }
 }
+
+.recentPostsSection {
+  background-color: #edf7fa;
+  padding: 2rem 0 3rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+
+
+    @media screen and (width <= $mobile) {
+      text-align: center;
+      justify-content: center;
+
+      .view-all-link {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.featuredWorksSection {
+  padding: 2rem 0 3rem;
+
+  &__header {
+    padding-bottom: 1.5rem;
+  }
+}
+
+//}

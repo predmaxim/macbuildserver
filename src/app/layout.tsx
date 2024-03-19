@@ -15,7 +15,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     <html lang="en">
     <body className={`${heebo.className} content-grid`}>
     <Header/>
-    <main className="main">
+    <main className="main full-width content-grid">
       {children}
     </main>
     <Footer/>

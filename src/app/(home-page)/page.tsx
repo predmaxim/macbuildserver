@@ -14,7 +14,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className={styles.HomePage}>
+    <>
       <section className={`${styles.heroSection} `}>
         <div className={styles.leftSide}>
           <h1 className={styles.h1}>
@@ -41,7 +41,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className={`${styles.recentPostsSection} full-width`}>
+      <section className={`${styles.recentPostsSection} full-width content-grid`}>
         <div className={styles.recentPostsSection__header}>
           <h2>Recent posts</h2>
           <Link href="#" className={`${styles['view-all-link']} view-all-link`}>View all</Link>
@@ -53,7 +53,7 @@ const HomePage = () => {
         <h2 className={styles.featuredWorksSection__header}>Featured works</h2>
         <WorkGrid works={works}/>
       </section>
-    </div>
+    </>
   );
 };
 export default HomePage;
