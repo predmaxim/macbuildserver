@@ -1,0 +1,67 @@
+@use "./vars" as *;
+
+//:root {
+//
+//}
+//
+//@media (prefers-color-scheme: dark) {
+//  :root {
+//
+//  }
+//}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.content-grid {
+  $padding-inline: 1.3rem;
+
+  $content-max-width: $desktop;
+  $breakout-max-width: calc($content-max-width + ($content-max-width * .1));
+
+  $padding: minmax($padding-inline, 1fr);
+  $content-width: min(100% - calc($padding-inline * 2), $content-max-width);
+  $breakout-size: minmax(0, calc(($breakout-max-width - $content-max-width) / 2));
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns:
+      [full-width-start]
+      $padding
+      [breakout-start]
+      $breakout-size
+      [content-start]
+      $content-width
+      [content-end]
+      $breakout-size
+      [breakout-end]
+      $padding
+      [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid .full-width {
+  grid-column: full-width;
+}
+
+.main {
+  padding: 0 0 3rem;
+}
+
+
+//@media (prefers-color-scheme: dark) {
+//  html {
+//    color-scheme: dark;
+//  }
+//}

@@ -1,0 +1,59 @@
+@use "@/app/(styles)/vars" as *;
+
+.WorkCard {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-rows: min-content min-content 1fr;
+  grid-template-areas:
+      "img header"
+      "img meta"
+      "img summary";
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+
+  @media screen and (width <= $tablet) {
+    grid-template-areas:
+      "img"
+      "header"
+      "meta"
+      "summary";
+    .img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .img {
+    grid-area: img;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .meta {
+    grid-area: meta;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+
+    .year {
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: #ffffff;
+      background-color: #142850;
+      border-radius: 1rem;
+      padding: 0 .8rem;
+    }
+
+    .category {
+      color: $light;
+      font-size: 1.25rem;
+    }
+  }
+
+  .summary {
+    grid-area: summary;
+  }
+}

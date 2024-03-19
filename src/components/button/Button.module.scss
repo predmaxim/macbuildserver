@@ -1,0 +1,37 @@
+@use "@/app/(styles)/vars" as *;
+
+.primary, .secondary {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.primary {
+  background-color: $primary;
+  padding: .9rem 1.25rem;
+
+  &:hover {
+    background-color: $primary-2;
+  }
+}
+
+.secondary {
+  background-color: $secondary;
+  padding: .9rem 1.25rem;
+
+  &:hover {
+    background-color: $secondary-2;
+  }
+}
+
+.link {
+  font-weight: 600;
+
+  &:hover {
+    color: $primary-2;
+  }
+}

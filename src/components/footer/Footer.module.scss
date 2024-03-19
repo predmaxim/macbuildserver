@@ -1,0 +1,25 @@
+@use "@/app/(styles)/vars" as *;
+
+.Footer {
+  grid-area: footer;
+  margin: auto;
+  width: fit-content;
+  padding: 3.3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+
+  .icons {
+    display: flex;
+    gap: 2.18rem;
+
+    &__item {
+      transition: $transition-default;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
