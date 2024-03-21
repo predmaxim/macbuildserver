@@ -2,17 +2,26 @@
 
 .primary, .secondary {
   color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 600;
 
   &:hover {
     color: #ffffff;
   }
 }
 
+.big {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: .9rem 1.25rem;
+}
+
+.small {
+  font-size: .9rem;
+  font-weight: 400;
+  padding: .3rem .9rem;
+}
+
 .primary {
   background-color: $primary;
-  padding: .9rem 1.25rem;
 
   &:hover {
     background-color: $primary-2;
@@ -21,7 +30,6 @@
 
 .secondary {
   background-color: $secondary;
-  padding: .9rem 1.25rem;
 
   &:hover {
     background-color: $secondary-2;
@@ -30,6 +38,7 @@
 
 .link {
   font-weight: 600;
+  padding: 0;
 
   &:hover {
     color: $primary-2;
