@@ -6,3 +6,5 @@ export {PostCard} from './post-card';
 export {PostGrid} from './post-grid';
 export {WorkCard} from './work-card';
 export {WorkGrid} from './work-grid';
+export {RegistrationFrom} from './registration-form';
+export {LoginForm} from './login-form';
