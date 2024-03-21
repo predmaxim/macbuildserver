@@ -1,3 +1,5 @@
+@use "@/app/(styles)/vars" as *;
+
 .Header {
   padding: 1.7rem 0 1.2rem;
   display: flex;
@@ -12,5 +14,31 @@
     align-items: center;
     width: 100%;
     font-weight: 700;
+    gap: 2rem;
+
+    @media screen and (width <= $tablet) {
+      flex-direction: row-reverse;
+      gap: 1rem;
+      padding: .5rem;
+      justify-content: space-between;
+    }
+  }
+
+  .signInBtn {
+
+  }
+
+  .profileBtn {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+
+    svg {
+      font-size: 2rem;
+
+      @media screen and (width <= $tablet) {
+        font-size: 3rem;
+      }
+    }
   }
 }
