@@ -2,16 +2,16 @@
   {
     "id": 1,
     "name": "Works",
-    "url": "#"
+    "url": "/#works"
   },
   {
     "id": 2,
     "name": "Blog",
-    "url": "#"
+    "url": "/#blog"
   },
   {
     "id": 3,
     "name": "Contact",
-    "url": "#"
+    "url": "/#contact"
   }
 ]
