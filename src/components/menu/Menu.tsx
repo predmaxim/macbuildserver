@@ -18,12 +18,17 @@ export const Menu = ({menuItems}: MenuProps) => {
     setOpen(!open);
   };
 
+  const onClickMobileMenuItem = () => {
+    setOpen(false);
+  };
+
   const Items = ({className}: { className: string }) => menuItems.map(({id, name, url}) => {
     return (
       <Link
         key={id}
         href={url}
         className={className}
+        onClick={onClickMobileMenuItem}
       >
         {name}
       </Link>
@@ -36,7 +41,11 @@ export const Menu = ({menuItems}: MenuProps) => {
         <Items className={styles.Menu__item}/>
       </div>
       <div className={styles.mobileMenu}>
-        <Button btnType="link" onClick={onClickMobileMenu}>
+        <Button
+          btnType="link"
+          onClick={onClickMobileMenu}
+          className={styles.mobileMenu__btn}
+        >
           <PiListLight/>
         </Button>
         {open &&
