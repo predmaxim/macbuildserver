@@ -1,12 +1,12 @@
 import express, {Express} from 'express';
 import cors from 'cors';
 import authRoute from './routes/authRoutes';
-import {PORT} from './libs/constants';
+import {APP_URL, PORT} from './libs/constants';
 
 const app: Express = express();
 
 app.use(cors({
-  origin: process.env.APP_URL,
+  origin: APP_URL,
   credentials: true
 }));
 app.use(express.json());
