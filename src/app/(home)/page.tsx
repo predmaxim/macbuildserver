@@ -5,14 +5,8 @@ import Image from 'next/image';
 import posts from '@/mocks/posts.json';
 import works from '@/mocks/works.json';
 import Link from 'next/link';
-import {redirect} from 'next/navigation';
 
 const HomePage = () => {
-
-  const onClickResumeBtn = () => {
-    redirect('/Predybailo_Maxim_Resume.pdf');
-  };
-
   return (
     <>
       <section className={`${styles.heroSection} `} id="home">
