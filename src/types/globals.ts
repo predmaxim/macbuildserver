@@ -1,3 +1,6 @@
+import {FormAuthCredentialsSchema, UserCredentialsSchema, UserSchema} from '@/libs/zod-schemas';
+import {z} from 'zod';
+
 export type MenuItemType = {
   id: number,
   name: string,
@@ -22,3 +25,7 @@ export type WorkType = {
   summary: string,
   url: string,
 }
+
+export type UserType = z.infer<typeof UserSchema>
+export type UserCredentialsType = z.infer<typeof UserCredentialsSchema>
+export type FormAuthCredentialsType = z.infer<typeof FormAuthCredentialsSchema>
