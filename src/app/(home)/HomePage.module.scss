@@ -43,6 +43,13 @@
     justify-content: center;
     flex: 1 1 35%;
 
+    @media screen and (width <= $tablet) {
+      justify-content: initial;
+    }
+    @media screen and (width <= $mobile) {
+      justify-content: center;
+    }
+
     .circle {
       position: relative;
       width: fit-content;
@@ -61,7 +68,7 @@
         top: 10px;
         left: -5px;
         z-index: -1;
-        background-color: #edf7fa;
+        background-color: $light;
         border-radius: 50%;
       }
 
@@ -78,7 +85,7 @@
 }
 
 .recentPostsSection {
-  background-color: #edf7fa;
+  background-color: $light;
   padding: 2rem 0 3rem;
 
   &__header {

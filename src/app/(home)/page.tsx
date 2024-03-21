@@ -15,7 +15,7 @@ const HomePage = () => {
 
   return (
     <>
-      <section className={`${styles.heroSection} `}>
+      <section className={`${styles.heroSection} `} id="home">
         <div className={styles.leftSide}>
           <h1 className={styles.h1}>
             Hi, I am John, Creative Technologist
@@ -41,7 +41,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className={`${styles.recentPostsSection} full-width content-grid`}>
+      <section className={`${styles.recentPostsSection} full-width content-grid`} id="blog">
         <div className={styles.recentPostsSection__header}>
           <h2>Recent posts</h2>
           <Link href="#" className={`${styles['view-all-link']} view-all-link`}>View all</Link>
@@ -49,7 +49,7 @@ const HomePage = () => {
         <PostGrid posts={posts}/>
       </section>
 
-      <section className={`${styles.featuredWorksSection} `}>
+      <section className={`${styles.featuredWorksSection} `} id="works">
         <h2 className={styles.featuredWorksSection__header}>Featured works</h2>
         <WorkGrid works={works}/>
       </section>
