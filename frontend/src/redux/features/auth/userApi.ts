@@ -1,7 +1,7 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 import {NextRequest} from 'next/server';
 import {FormAuthCredentialsType} from '@/types/globals';
-import {API_URL} from '@/libs/constants';
+import {AUTH_URL} from '@/libs/constants';
 import {encrypt} from '@/libs/jwt';
 
 export const login = createAsyncThunk(
@@ -9,7 +9,7 @@ export const login = createAsyncThunk(
   async (credentials: FormAuthCredentialsType) => {
     const {email, password, remember} = credentials;
     const token = await encrypt({user: {email, password}, remember});
-    const response = await fetch(`${API_URL}/auth/login`, {
+    const response = await fetch(`${AUTH_URL}/auth/login`, {
       method: 'POST',
       credentials: 'include',
       headers: {
