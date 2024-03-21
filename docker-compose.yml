@@ -1,0 +1,33 @@
+version: '3'
+services:
+
+  auth:
+    build: auth
+    restart: always
+    container_name: auth
+    environment:
+      FRONT_APP_URL: ${FRONT_APP_URL}
+      PORT: ${AUTH_PORT}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRES: ${JWT_EXPIRES}
+    volumes:
+      - /app/node_modules
+      - ./auth:/app
+    ports:
+      - ${AUTH_PORT}:${AUTH_PORT}
+
+  frontend:
+    build: frontend
+    restart: always
+    container_name: frontend
+    environment:
+      NEXT_PUBLIC_AUTH_URL: ${AUTH_URL}
+      NEXT_PUBLIC_JWT_SECRET: ${JWT_SECRET}
+      NEXT_PUBLIC_JWT_EXPIRES: ${JWT_EXPIRES}
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    ports:
+      - ${FRONT_APP_PORT}:${FRONT_APP_PORT}
+    depends_on:
+      - auth
