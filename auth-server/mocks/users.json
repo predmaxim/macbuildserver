@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "email": "predmaxim@ya.ru",
+    "password": "$2a$10$mMEEOHNuI11DvoJO4mtYMe3X3/8JWbQxlC4CQl0v4WHc.AoNg5yRu"
+  },
+  {
+    "id": "2",
+    "email": "testuser@test.ru",
+    "password": "$2a$10$mMEEOHNuI11DvoJO4mtYMe3X3/8JWbQxlC4CQl0v4WHc.AoNg5yRu"
+  }
+]
