@@ -1,4 +1,4 @@
-# Test task for Valery
+# Test task for MacBuildServer
 
 ## Dependencies
 
@@ -12,3 +12,10 @@ First, you must install it for run App.
 2. Rename .env-example to .env and populate it some values ('for example' - values by default for dev)
 3. Run services: `docker compose --env-file .env.dev up -d`
 4. Open App in your browser on url: `http://localhost:3000`
+
+## Contacts
+
+Maxim Predybailo
+
+- [github](https://github.com/predmaxim)
+- [telegram](https://t.me/PredMaxim)
