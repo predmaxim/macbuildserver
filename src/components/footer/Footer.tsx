@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className={styles.Footer}>
+    <footer className={styles.Footer} id="contact">
       <div className={styles.icons}>
         <Link href="#">
           <Image src={fb} alt="facebook" className={styles.icons__item}/>
