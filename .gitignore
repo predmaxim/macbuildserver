@@ -36,7 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 # ide
-.idea
+.idea/
 
 #env
 .env
